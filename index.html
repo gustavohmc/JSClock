@@ -67,12 +67,28 @@
         trasition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
       }
 
-      .min-hand{
-        background-color: #2b2e33;
+      .min-hand {
+        border: 1px solid black;
+        box-shadow: inset 1px 1px #4a4f56;
+        z-index: 2;
+      }
+
+      .hour-hand{
+        background-image: linear-gradient(black, grey, black);
+        height: 8px;
+
+        /* used clip path to make the hand look shorter */
+        -webkit-clip-path: polygon(48% 0, 100% 0, 100% 100%, 48% 100%);
+clip-path: polygon(48% 0, 100% 0, 100% 100%, 48% 100%);
+
+
+        z-index: 2;
       }
 
       .sec-hand{
         background-color: red;
+        z-index: 1;
+        height: 2px;
       }
 
 
